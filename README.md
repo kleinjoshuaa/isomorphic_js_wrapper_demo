@@ -11,6 +11,7 @@ You will also need to set up a feature flag and a user id - those will be used b
 
 ![image](https://github.com/kleinjoshuaa/isomorphic_js_wrapper_demo/assets/1207274/1d72666e-c591-4388-9469-b332635423a0)
 
+Lastly, to run this you will need to run `npm install` and then `npm start` and it will serve the sample code on localhost port 3000.
 
 The SDK Wrapper is an extension of the wrapper developed for the [Associator](https://github.com/kleinjoshuaa/associator/) and has a lot of features to handle multiple traffic types and associations on the client side. 
 
