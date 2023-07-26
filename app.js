@@ -1,3 +1,4 @@
+require('dotenv').config()
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -6,7 +7,8 @@ var logger = require("morgan");
 const { SplitFactory } = require("@splitsoftware/splitio");
 import {SplitWrapper} from "./local-lib/split-wrapper/split_wrapper.js"
 
-const splitSdkKey = "vsch2mov62n9krmv5s4mic2ptfeoblqv2n3v";
+
+const splitSdkKey = process.env.SERVER_SDK_KEY;
 const SplitSdk = new SplitWrapper(SplitFactory, splitSdkKey, false);
 
 var app = express();
@@ -31,6 +33,7 @@ app.get("/", (req, res) => {
       flag: splitFlag,
       user: user,
       treatment: treatment,
+      clientSDKkey: process.env.CLIENT_SDK_KEY
     });
   });
 });

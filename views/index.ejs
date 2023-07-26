@@ -6,7 +6,7 @@
     <script src="//cdn.split.io/sdk/split-10.23.0.min.js"></script>
     <script type="module">
       import { SplitWrapper } from './javascripts/split_wrapper.js';
-      const splitSdk = new SplitWrapper(splitio, "ekd9asvl3u7d0b4d2rq265o2itt3ad7tnp1v", false);
+      const splitSdk = new SplitWrapper(splitio, "<%= clientSDKkey %>", false);
 
       splitSdk.getReady('<%= user %>', 'user').then(() => {
         let clientEval = document.getElementById('clientEval')
