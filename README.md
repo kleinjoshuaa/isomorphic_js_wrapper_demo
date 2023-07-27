@@ -15,4 +15,13 @@ Lastly, to run this you will need to run `npm install` and then `npm start` and 
 
 The SDK Wrapper is an extension of the wrapper developed for the [Associator](https://github.com/kleinjoshuaa/associator/) and has a lot of features to handle multiple traffic types and associations on the client side. 
 
+
+The constructor function for the wrapper requires that you pass in the Split Factory object given to you by the Splitio library on your platform of choice. This means the usage of this wrapper is independant from your bundling approach - you can use the cdn, npm, or any other way you prefer to bundle the SDK as long as the `SplitFactory` or `splitio` object is exposed. 
+
+`attributes` can also be passed in and they will always be passed in when calling `getTreatment`. 
+
+```javascript
+constructor(SplitFactory, authKey, debug, attributes) {
+```
+
 Take a peek and enjoy! :D
